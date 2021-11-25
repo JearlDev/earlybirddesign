@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	color: #262121;
+	margin: 0 0;
+	padding: 0 0;
+	overflow-x: hidden;
+	background-image: url(Images/bird.png);
+	background-repeat: no-repeat;
+	background-size: 100% 750px;
+	background-position: center -185px;
+}
+
+header {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	height: 85px;
+	width: 100vw;
+	transition-property: background-color, box-shadow;
+	transition-duration: .16s;
+	transition-timing-function: ease-in-out;
+}
+
+footer {
+	background-color: #EFF3F7;
+	width: 100%;
+	height: 13em;
+}
+
+#pageContainer {
+	min-height: 100vh;
+}
+
+a, a:active, a:visited, a:link {
+	text-decoration: none;
+	color: #262121;
+}
+
+nav > ul > li {
+	list-style-type: none;
+	font-weight: bold;
+	text-align: center;
+}
+
+nav > ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+nav {
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+main, nav {
+	width: 80%;
+	margin: 0 auto;
+}
+
+main {
+	margin: 60px auto;
+	margin-bottom: 50px;
+	padding-top: 60px;
+	min-height: 61em;
+}
+
+#logo {
+	letter-spacing: 2px;
+	display: inline-block;
+}
+
+.fa-dove {
+	transform: scale(1.1,1.1);
+}
+
+.fa-laptop, .fa-laptop-code, .fa-server {
+	font-size: 3em;
+}
+
+#slogan {
+	position: relative;
+	top: 0;
+	left: 80px;
+	font-size: 2.3em;
+	text-transform: uppercase;
+}
+
+#slogan2 {
+	position: relative;
+	top: -20px;
+	left: 80px;
+	font-size: 1.2em;
+}
+
+#servicesIntro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 320px;
+	font-size: 1.35em;
+}
+
+#servicesIntro > p {
+	margin: 0 0;
+}
+
+#services {
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+	position: relative;
+	top: 26em;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#services > article {
+	border: 1px solid #D8E2EA;
+	border-radius: 2em;
+	padding-top: 2.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 14em;
+	width: 16em;
+}
+
+#socialMedia {
+	width: 80%;
+	margin: 0 auto;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#socialMedia > span {
+	width: 100px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.fab {
+	font-size: 3em;
+}
+
+#terms {
+	width: 80%;
+	margin: 0 auto;
+	height: 50%;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+}
+
+.navLink {
+	transition: all 0.2s ease-in-out;
+	display: inline-block;
+	padding: 0.15em 0.4em;
+	border-radius: 0.6em;
+}
+
+.navLink:hover {
+	background-color: #262121;
+	color: #EFF3F7;
+}
+
+
+/*************media queries ***************/
+
+@media screen and (max-width: 1350px){
+	body {
+		font-size: 15px;
+		background-size: 1350px 750px;
+		background-position: left -200px;
+	}
+
+	#servicesIntro {
+		font-size: 1.3em;
+	}
+
+	header {
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 1100px){
+	body {
+		font-size: 14px;
+	}
+
+	#services {
+		top: 27em;
+	}
+
+	#services > article {
+		height: 13em;
+		width: 15em;
+	}
+
+}
+
+@media screen and (max-width: 840px){
+	body {
+		font-size: 13.5px;
+		background-size: 1000px 600px;
+		background-position: left -100px;
+		
+	}
+
+	#services {
+		top: 20em;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#services > article {
+		height: 13em;
+		width: 27em;
+		margin-top: 3em;
+	}
+
+	header {
+		height: 75px;
+	}
+
+	main, nav, #terms, #socialMedia {
+		width: 90%;
+	}
+
+	main {
+		min-height: 88em;
+	}
+
+	#servicesIntro {
+		top: 270px;
+	}
+}
+
+@media screen and (max-width: 650px){
+	body {
+		font-size: 12px;
+		max-width: 100vw;
+		background-size: 850px 450px;
+		background-position: left 50px;
+	}
+	
+	nav > ul {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main {
+		padding-top: 130px; 
+		min-height: 93em
+	}
+
+	#servicesIntro {
+		top: 220px;
+	}
+
+	header {
+		background-color: #D8E2EA;
+		box-shadow: #D8E2EA;
+		height: 180px;
+	}
+
+	#logoLi {
+		position: fixed;
+		top: -2px;
+		width: 40px;
+		right: 80vw;
+	}
+	
+
+	nav > ul > li {
+		width: 100%;
+		height: 40px;
+	}
+
+	nav > ul > li > a {
+		display: inline-block;
+		padding-top: 20px;
+	}
+
+	.navLink:hover {
+		background-color: #D8E2EA;
+		color: #262121;
+	}
+}
